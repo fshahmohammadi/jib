@@ -39,27 +39,13 @@
 <!-- First Band (Image) -->
 
 <div class="row" >
-    <div class="large-12 columns">
-        <!--
-        <img src="http://placehold.it/1000x400&text=[img]">
-
-        <hr>
-        -->
-        <h1>
-            به جیب خوش آمدید
-        </h1>
-        <h2>
-            عضو هستید؟ <a href>وارد شوید!</a><br>
-            یا <a href>ثبت نام کنید !</a><br>
-            یا حتی یه دور در سایت بزنید<br>
-        </h2>
-    </div>
+	{% block contents %}
+    {% endblock %}
+    
 </div>
 <!-- Second Band (Image Left with Text) -->
 
 <div class="row">
-    {% block base %}
-    {% endblock %}
 
 <!--    <div class="large-4 columns">
         <img src="http://placehold.it/400x300&text=[img]">
