@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-import settings
+#import settings
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -8,6 +8,7 @@ import settings
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'jib_site.views.home', name='home'),
+    url(r'login/^$', 'jib_site.views.long'),
     # url(r'^jib_site/', include('jib_site.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
