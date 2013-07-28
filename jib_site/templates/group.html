@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{% block contents %}
+<div class="row" >
+    <div class="large-12 columns">
+      <h1>مدیریت گروه</h1>
+      <h2>گروه {{group.getName}}</h2>
+      <div id="groupSide">
+      	<div class="groupSide">
+      		هزینه ها
+      	</div><br />
+      	<div class="groupSide">
+      		اعضا
+      	</div><br>
+      </div>
+      <div id="groupMain"></div>
+    </div>
+</div>
+{% endblock %}

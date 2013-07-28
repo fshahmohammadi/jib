@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="/mymedia/css/normalize.css">
     <link rel="stylesheet" href="/mymedia/css/foundation.css">
-
+    <link rel="stylesheet" href="/mymedia/css/foundation.css">
     <script src="/mymedia/js/vendor/custom.modernizr.js"></script>
 
 </head>
@@ -26,10 +26,10 @@
     </div>
     <div class="large-9 columns">
         <ul class="button-group right">
-            <li><a href="#" class="button">Link 1</a></li>
-            <li><a href="#" class="button">Link 2</a></li>
-            <li><a href="#" class="button">Link 3</a></li>
-            <li><a href="#" class="button">Link 4</a></li>
+            <li><a href="#" class="button">صفحه ی شخصی</a></li>
+            <li><a href="#" class="button">آمار و نمودار</a></li>
+            <li><a href="#" class="button">گروه ها</a></li>
+            <li><a href="#" class="button">تخفیفان</a></li>
         </ul>
     </div>
 </div>
@@ -81,9 +81,27 @@
     -->
 
 </div>
-
+<div class="row">
+    <div class="large-12 columns">
+        <h2>
+        	
+        </h2>
+        <div class="saleContainer">
+        	{% for i in 3|get_range%}
+			<div class="saleBox">
+				<img class="saleImg" src="{{sales[i].getImg()}}"/>
+				<div class="saleNum">{{sales[i].getNum()}}%</div>
+				<div class="deadline">{{sales[i].getDeadLine()}}</div>
+				<div class="saleName">baaaasi{{sales[i].getName()}}</div>
+			</div>
+			{% endfor %}
+        </div>
+    </div>
+    
+</div>
 
 <!-- Footer -->
+
 
 <footer class="row">
     <div class="large-12 columns">
