@@ -1,11 +1,18 @@
 {%extends 'base.html'%}
 {% block contents%}
+		
 <div>
+	
 	<table>
+		<tr>
+			<td>تاریخ</td>
+			<td>مقدار</td>
+			<td>نوع</td>
+		</tr>
 	{% for i in trans%}
 		<tr>
 			<td>{{i.date}}</td>
-			<td>{{ i.amount }}</td>
+			<td>{{i.amount}}</td>
 			<td>{{i.ttype}}</td>
 		</tr>
 	{% endfor %}

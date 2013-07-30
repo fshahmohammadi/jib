@@ -5,13 +5,13 @@
        <h1>مدیریت گروه</h1>
        <h2>اطلاعیه ها</h2>
        <h2>گروه ها</h2>
-       {{for i in groups}}
-       <div class="group">
+       {%for i in groups%}
+       <div class="group" onclick="window.location.href='/group/{{i.id}}'">
        	<img id="groupImg" src="/mymedia/images/images.jpg" />
-       	<span>نام گروه:{{group[i].getName()}}</span><br>
-		<span>نام مدیر:{{group[i].getManager()}}</span>
+       	<span>نام گروه:{{i.name}}</span><br>
+		<span>نام مدیر:{{i.admin}}</span>
        </div>
-       {{endfor}}
+       {%endfor%}
     </div>
 </div>
 {% endblock%}

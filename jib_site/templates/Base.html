@@ -12,9 +12,17 @@
 
     <link rel="stylesheet" href="/mymedia/css/normalize.css">
     <link rel="stylesheet" href="/mymedia/css/foundation.css">
-    <link rel="stylesheet" href="/mymedia/css/foundation.css">
+    <link rel="stylesheet" href="/mymedia/css/jeeblization.css">
     <script src="/mymedia/js/vendor/custom.modernizr.js"></script>
 
+
+ <link rel='stylesheet' type='text/css' href='/mymedia/js/fullcalendar-persian/fullcalendar/fullcalendar.css' />
+        <link rel='stylesheet' type='text/css' href='/mymedia/js/fullcalendar-persian/fullcalendar/fullcalendar.print.css' media='print' />
+        <script type='text/javascript' src='/mymedia/js/fullcalendar-persian/jquery/jquery-1.8.1.min.js'></script>
+        <script type='text/javascript' src='/mymedia/js/fullcalendar-persian/jquery/jquery-ui-1.8.23.custom.min.js'></script>
+        <script type='text/javascript' src='/mymedia/js/fullcalendar-persian/fullcalendar/jalali.js'></script>
+        <script type='text/javascript' src='/mymedia/js/fullcalendar-persian/fullcalendar/fullcalendar.js'></script>
+       
 </head>
 <body dir="rtl">
 
@@ -46,59 +54,20 @@
 <!-- Second Band (Image Left with Text) -->
 
 <div class="row">
-
-<!--    <div class="large-4 columns">
-        <img src="http://placehold.it/400x300&text=[img]">
-    </div>
-    <div class="large-8 columns">
-        <h4>This is a content section.</h4>
-        <div class="row">
-            <div class="large-6 columns">
-                <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-            </div>
-            <div class="large-6 columns">
-                <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<div class="row">
-    <div class="large-8 columns">
-        <h4>This is a content section.</h4>
-
-        <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-    </div>
-    <div class="large-4 columns">
-        <img src="http://placehold.it/400x300&text=[img]">
-    </div>
-    -->
-
-</div>
-<div class="row">
-    <div class="large-12 columns">
-        <h2>
-        	
+<h2>
         </h2>
         <div class="saleContainer">
-        	{% for i in 3|get_range%}
+        {% for i in '012'|make_list %}
 			<div class="saleBox">
-				<img class="saleImg" src="{{sales[i].getImg()}}"/>
-				<div class="saleNum">{{sales[i].getNum()}}%</div>
-				<div class="deadline">{{sales[i].getDeadLine()}}</div>
-				<div class="saleName">baaaasi{{sales[i].getName()}}</div>
+				<img class="saleImg" src=""/>
+				<div class="saleNum">{{sales.i.getNum}}%</div>
+				<div class="deadline">{{sales.i.getDeadLine}}</div>
+				<div class="saleName">baaaasi{{sales.i.getName}}</div>
 			</div>
-			{% endfor %}
+		{% endfor %}
         </div>
-    </div>
-    
 </div>
+
 
 <!-- Footer -->
 
