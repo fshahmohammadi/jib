@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{% block contents%}
+<div>
+	<table>
+	{% for i in trans%}
+		<tr>
+			<td>{{i.date}}</td>
+			<td>{{ i.amount }}</td>
+			<td>{{i.ttype}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+</div>
+
+{% endblock%}

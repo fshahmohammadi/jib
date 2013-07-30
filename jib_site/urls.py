@@ -1,15 +1,15 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from jib_site import settings
-
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
-
+admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'jib_site.views.home', name='home'),
     url(r'^login/$', 'jib_auth.views.login'),
+    url(r'^trans/(.+)/', 'financial.views.trans'),
     # url(r'^jib_site/', include('jib_site.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
