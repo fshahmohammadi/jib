@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{% block contents%}
+<div class="row" >
+    <div class="large-12 columns">
+       <h1>مدیریت گروه</h1>
+       <h2>اطلاعیه ها</h2>
+       <h2>گروه ها</h2>
+       {{for i in groups}}
+       <div class="group">
+       	<img id="groupImg" src="/mymedia/images/images.jpg" />
+       	<span>نام گروه:{{group[i].getName()}}</span><br>
+		<span>نام مدیر:{{group[i].getManager()}}</span>
+       </div>
+       {{endfor}}
+    </div>
+</div>
+{% endblock%}
