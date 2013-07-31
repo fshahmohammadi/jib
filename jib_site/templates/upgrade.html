@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block contents %}
+<form action='.' method="post">
+{% csrf_token %}
+<p align="center"> {{error}} </p>
+<table align="center">
+<tr> <td> {{f.receipt}} </td> <td> <label> :شماره قبض بانک</label> </td> </tr>
+<tr> <td colspan="2"> <a href> پرداخت اینترنتی از طریق درگاه بانک</a></td></tr>
+<tr> <td colspan="2" align="center"> <input type="submit" value="ارتقا" /> </td> </tr>
+</table>
+</form>
+{% endblock %}
+

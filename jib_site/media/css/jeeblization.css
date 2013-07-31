@@ -1,0 +1,82 @@
+.saleContainer{
+    width: 100%;
+    height: 300px;
+}
+.saleBox{
+    float: left;
+    width: 300px;
+    height: 300px;
+    border: 20px solid #ff7f50;
+    margin: 10px;
+    border-radius: 10px;;
+}
+.saleBox:hover{
+    border-color:#7f0a0c;
+}
+.saleImg{
+    width: 100%;
+    height: 100%;
+}
+.saleNum{
+	position: relative;
+	bottom: 260px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 300%;
+}
+.deadline{
+	position: relative;
+	bottom: 260px;
+    float: right;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 150%;
+}
+.saleName{
+	position: relative;
+	bottom: 100px;
+	text-align: center;
+}
+.group{
+	float: right;
+	width: 200px;
+	border: 20px solid #eeeeee;
+}
+.group:hover{
+	border-color: #cccccc;
+}
+#groupImg{
+	width: 70px;
+	height: 70px;
+	float: right;
+	
+}
+#groupSide{
+	float: right;
+	width:25%;
+	height: 500px;
+	background-color: #eeeeee;
+	border-radius: 10px;
+	text-align: center;
+}
+#groupMain{
+	float: right;
+	height: 500px;
+	width: 75%;
+}
+.groupSide{
+	font-size: 170%;
+	width: 100%;
+	text-align: center;
+	margin: 20px;
+	border-bottom: 3px solid #cccccc;
+}
+<<<<<<< HEAD
+table{
+	margin: 0 auto;
+}
+=======
+>>>>>>> 7adf0db7704e606b019614a192de41051b29a600

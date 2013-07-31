@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block contents %}
+<form action='.' method="post">
+{% csrf_token %}
+<p align="center"> {{error}} </p>
+<table align="center">
+<tr> <td> {{f.username}} </td> <td> <label> :شناسه کاربری </label> </td> </tr>
+<tr> <td> {{f.password}} </td> <td> <label> :رمز عبور </label> </td> </tr>
+<tr> <td> {{f.confirm}} </td> <td> <label> :تکرار رمز عبور </label> </td> </tr>
+<tr> <td> {{f.name}} </td> <td> <label> :نام </label> </td> </tr>
+<tr> <td> {{f.lname}} </td> <td> <label> :نام خانوادگی </label> </td> </tr>
+<tr> <td> {{f.email}} </td> <td> <label> :پست الکترونیکی </label> </td> </tr>
+<tr> <td colspan="2" align="center"> <input type="submit" value="ثبت نام" /> </td> </tr>
+</table>
+</form>
+{% endblock %}

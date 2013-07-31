@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block contents %}
+<form action='.' method="post">
+{% csrf_token %}
+<h2 align="center"> {{error}} </h2>
+<table align="center">
+<tr> <td> {{f.username}} </td> <td> <label> :شناسه کاربری </label> </td> </tr>
+<tr> <td> {{f.password}} </td> <td> <label> :رمز عبور </label> </td> </tr>
+<tr> <td colspan="2" align="center"> <input type="submit" value="ورود" /> </td> </tr>
+</table>
+</form>
+{% endblock %}

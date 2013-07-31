@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+{% block contents %}
+<div class="row" >
+    <div class="large-12 columns">
+<<<<<<< HEAD
+      <h1>مدیریت گروه {{group.admin.user.name}}</h1>
+      <h2>گروه {{group.name}}</h2>
+=======
+      <h1>مدیریت گروه</h1>
+      <h2>گروه {{group.getName}}</h2>
+>>>>>>> 7adf0db7704e606b019614a192de41051b29a600
+      <div id="groupSide">
+      	<div class="groupSide">
+      		هزینه ها
+      	</div><br />
+      	<div class="groupSide">
+      		اعضا
+      	</div><br>
+      </div>
+<<<<<<< HEAD
+      <div id="groupMain">
+      <div id="trans">
+      	<table>
+      		<tr>
+					<td>تاریخ</td>
+					<td>مقدار</td>
+					<td>عضو</td>
+					<td>نوع</td>
+      		</tr>
+      		{% for i in trans%}
+				<tr>
+					<td>{{i.date}}</td>
+					<td>{{i.amount}}</td>
+					<td>{{i.user.user.name}}</td>
+					<td>{{i.ttype}}</td>
+				</tr>
+      		{% endfor %}
+      	</table>
+      </div>
+      <div id="members"></div>
+      </div>
+=======
+      <div id="groupMain"></div>
+>>>>>>> 7adf0db7704e606b019614a192de41051b29a600
+    </div>
+</div>
+{% endblock %}

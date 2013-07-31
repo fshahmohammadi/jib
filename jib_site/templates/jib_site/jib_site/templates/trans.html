@@ -1,0 +1,54 @@
+{%extends 'base.html'%}
+{% block contents%}
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	var chart;
+$(document).ready(function() {
+chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'container',
+			defaultSeriesType: 'line',
+			marginRight: 130,
+			marginBottom: 25
+		},
+		xAxis: {
+			type: 'datetime',
+		},
+		series: [{
+			data: [
+				{%for i in amounts%}
+				{%for j in dates %}
+					[  Date.UTC({{j.0|date:"Y, m, d"}}),{{i.0}} ],
+				{%endfor%}
+				{%endfor%}	
+				 ]	
+		}],
+	});
+});
+		</script>
+		<script type="text/javascript" src="/mymedia/js/Highcharts-2.2.0/js/highcharts.js"></script>
+		<script type="text/javascript" src="/mymedia/js/Highcharts-2.2.0/js/modules/exporting.js"></script>
+	
+<div>
+	{{dates.0.0|date:"Y, m, d"}}<br>
+	It is {% now "SHORT_DATETIME_FORMAT" %}
+<div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
+
+	
+	<table>
+		<tr>
+			<td>تاریخ</td>
+			<td>مقدار</td>
+			<td>نوع</td>
+		</tr>
+	{% for i in trans%}
+		<tr>
+			<td>{{i.date}}</td>
+			<td>{{i.amount}}</td>
+			<td>{{i.ttype}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+</div>
+
+{% endblock%}
