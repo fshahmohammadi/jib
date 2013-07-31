@@ -4,7 +4,9 @@ class login_form(forms.Form):
 	username = forms.CharField()
 	password = forms.CharField(widget=forms.PasswordInput)
 
-class upgrade(forms.Form):
+<<<<<<< HEAD
+=======
+class upgrade_form(forms.Form):
 	receipt = forms.IntegerField()
 
 class register_form(forms.Form):
@@ -18,3 +20,4 @@ class register_form(forms.Form):
 
 
 
+>>>>>>> 7adf0db7704e606b019614a192de41051b29a600

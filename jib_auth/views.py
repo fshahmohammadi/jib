@@ -7,6 +7,7 @@ from jib_site.settings import MEDIA_ROOT
 from django.views.decorators.csrf import csrf_protect
 from django.core.context_processors import csrf
 from jib_auth.forms import *
+from financial.models import Golden
 import os.path	
 import datetime
 
@@ -25,8 +26,6 @@ def login(request):
 	f = login_form()
 	return render_to_response('login.html', RequestContext(request,locals()))
 
-<<<<<<< HEAD
-=======
 @csrf_protect
 def register(request):
 	if request.method == 'POST':
@@ -37,8 +36,7 @@ def register(request):
 			elif f.cleaned_data['password'] != f.cleaned_data['confirm']:
 				error = 'password mismatch'
 			else:
-				User.objects.create_user(username = f.cleaned_data['username'], password=f.cleaned_data['password'], email = f.cleaned_data['email'])
-				#create user
+				User.objects.create_user(username = f.cleaned_data['username'], password=f.cleaned_data['password'], email = f.cleaned_data['email'], first_name=f.cleaned_data['name'], last_name=f.cleaned_data['lname'])
 				error = 'registered successfully'
 
 	f = register_form()
@@ -49,9 +47,10 @@ def upgrade(request):
 	if request.method == 'POST':
 		f = upgrade_form(request.POST)
 		if f.is_valid():
-			#upgrade	
-			pass
+			g = Golden()
+			g.user = request.user
+			g.account = 0
+			g.save()
+			return render_to_response('text.html', {text : 'done'} )
 	f = upgrade_form()
 	return render_to_response('upgrade.html', RequestContext(request,locals()))
->>>>>>> 7adf0db7704e606b019614a192de41051b29a600
-
